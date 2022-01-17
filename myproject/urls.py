@@ -22,7 +22,7 @@ from . import views
 
 urlpatterns = [ # List
     path('letmein/', admin.site.urls,name="adminRoute"),
-    #path(route, view, kwargs=None, nameOfTheRoute=None)
+    #path(route, viewfunction, kwargs=None, nameOfTheRoute=None)
     path('', views.myHomeViewFunction , name="homeRoute" ),
     path('aboutus/', views.myAboutUsViewFunction , name="aboutUsoute" ),
     path('contactus/', views.myContactUsViewFunction , name="contactUsRoute" ),
