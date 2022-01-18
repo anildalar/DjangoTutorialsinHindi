@@ -10,7 +10,7 @@ def myHomeViewFunction(request):
     return render(request,'index.html')
 
 def myAboutUsViewFunction(request):
-    return HttpResponse('Hello from Aboutus Route')
+    return render(request,'about-us.html')
 
 def myContactUsViewFunction(request):
     return HttpResponse('Hello from Contactus route')
@@ -19,3 +19,16 @@ def myContactUsViewFunction(request):
 def category(request,category=None):
     x = request.GET.get('name')
     return HttpResponse(f'Hello {x} from Category  {category}')
+
+
+def cart(request):
+    return render(request, 'shopping-cart.html')
+
+def detail(request):
+    return render(request, 'single-product.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def login(request):
+    return render(request, 'login.html')
