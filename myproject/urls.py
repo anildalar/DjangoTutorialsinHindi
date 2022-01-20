@@ -25,11 +25,10 @@ urlpatterns = [ # List
     #path(routename, viewfunction, kwargs=None, nameOfTheRoute=None)
     path('', views.myHomeViewFunction , name="homeRoute" ),
     path('aboutus/', views.myAboutUsViewFunction , name="aboutUsoute" ),
-    path('contactus/', views.myContactUsViewFunction , name="contactUsRoute" ),
     path('product/<slug:category>',views.category,name="categoryRoute"),
     path('cart/',views.cart,name="cartRoute"),
     path('detail/',views.detail,name="detailRoute"),
-    path('contact/',views.contact,name="contactRoute"),
+    path('contactus/',views.contact,name="contactRoute"),
     path('login/',views.login,name="loginRoute"),
 
 ]

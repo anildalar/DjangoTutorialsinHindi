@@ -12,10 +12,6 @@ def myHomeViewFunction(request):
 def myAboutUsViewFunction(request):
     return render(request,'about-us.html')
 
-def myContactUsViewFunction(request):
-    return HttpResponse('Hello from Contactus route')
-
-
 def category(request,category=None):
     x = request.GET.get('name')
     return HttpResponse(f'Hello {x} from Category  {category}')
@@ -28,7 +24,14 @@ def detail(request):
     return render(request, 'single-product.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    nm = request.GET.get('name')
+    mi = request.GET.get('mission')
+    #render(request, template_name, context=None, content_type=None, status=None, using=None)
+    context = {
+        "name": nm,
+        "ourmission": mi,
+    } # dictionary of
+    return render(request, 'contact.html',context)
 
 def login(request):
     return render(request, 'login.html')
