@@ -30,5 +30,7 @@ urlpatterns = [ # List
     path('detail/',views.detail,name="detailRoute"),
     path('contactus/',views.contact,name="contactRoute"),
     path('login/',views.login,name="loginRoute"),
+    path('search/',views.search,name="searchRoute"),
+    path('checkout/',views.checkout,name="checkoutRoute"),
 
 ]

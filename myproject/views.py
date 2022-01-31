@@ -1,6 +1,7 @@
 
 
 
+from multiprocessing import context
 from django.http.response import HttpResponse
 from django.shortcuts import render
 
@@ -34,4 +35,19 @@ def contact(request):
     return render(request, 'contact.html',context)
 
 def login(request):
-    return render(request, 'login.html')
+    d = request.GET.get('sid')
+    if not d:
+        d = ''
+    context = {
+        "sid":d
+    }
+    return render(request, 'login.html',context)
+
+def search(request):
+    context = {}
+    return render(request, 'category-grid.html',context)
+
+def checkout(request):
+    context = {}
+
+    return render(request, 'checkout.html',context)
