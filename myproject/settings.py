@@ -26,7 +26,9 @@ INSTALLED_APPS = [ # LIST
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'categroy'
+    'categroy',
+    'brand',
+    'tag'
 ]
 
 MIDDLEWARE = [
